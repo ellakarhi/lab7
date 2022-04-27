@@ -19,7 +19,7 @@ def box(loop, name):
   loop += 1
   if loop == length:
     print("")
-    print("Your name have now been mixed up")
+    print("Your name has now been mixed up")
   else:
     print("")
     box(loop, name)
