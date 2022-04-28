@@ -36,3 +36,4 @@ for i in range (number_length):
 for i in range (symbol_length):
   number_rand = random.randint(0, len(number))
   password = password + number[number_rand]
+
