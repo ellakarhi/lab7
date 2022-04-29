@@ -1,8 +1,20 @@
-def substr(s):
-  x = len(s)
+name = input("Enter a name: ")
+name_length = len(name)
 
-def part1(s):
-  x = len(s)
-  print (s[x-1] + s[x-2] + s[x-3] + s[x-])
+
+for k in range (name_length) :
+  line = ""
+
+  for i in range (name_length):
+    z = k + i
+    
+    if (z >= name_length):
+      z = z % name_length
+      
+    if (i == 0):
+      line = line + name[z]
+    else:
+      line = line + "\t" + name [z]
+
   
-part1("Ella")
+  print (line)
