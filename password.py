@@ -42,5 +42,5 @@ p = len(password)
 
 #for i in range(p):
   #password_rand = random.randint(0, len(password))
-  #random_password = random_password + random_password[password_rand]
+ # random_password = random_password + random_password[password_rand]
 print (password)
