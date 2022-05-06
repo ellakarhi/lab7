@@ -24,7 +24,7 @@ def box(loop, name):
     print("")
     box(loop, name)
 
-name = getStr("What name would you like to get mixed up? ")
+name = getStr("What name would you like to get mixed up: ")
 box(0, name)
 
 

@@ -6,7 +6,8 @@ upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 number = "01223456789"
 symbol = "!@#$%^&*()_+><.,[]{}\|"
 
-length = 10
+length1= int(input("How long would you like your password to be: "))
+length = length1 - 4
 lower_length = random.randint(0, length)
 upper_length = random.randint(0, length-lower_length)
 number_length = random.randint(0, length - upper_length - lower_length)
@@ -69,17 +70,3 @@ def new_password():
 new_password()
 print("ta da!")
 
-
-'''
-so, when you do random.randint, it considers BOTH numbers in the range.
-So if I gave it 0 and 5, both 0 and 5 could be possible results from it.
-The errors were happening when it was randomizing the max number (length of the character array) and when you are indexing an array, we always start at 0. SO, lets say it's the alphabet -- if the randint gives us 26, and we say lower[26], it's actually trying to get the 27th letter
-of the alphabet, which doesn't exist. So to prevent that from happening in functions that use an inclusive range, we make sure to say (0, length-1) instead of (0, length). If that makes sense lol
-'''
-
-'''
-Oh I also just noticed you had an extra letter in the 'lower' list, but I fixed it
-'''
-""" That does make sense. Thank you very much. I really appreciate it!"""
-
-'''anytime :)'''

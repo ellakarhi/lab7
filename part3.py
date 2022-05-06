@@ -17,12 +17,12 @@ def substr():
     return
   if length > x:
     for i in range (i, len(s)):
-      subs = subs + s[i]
+      subs = subs + s[i] 
       print(subs)
     #print (s[i:len(s)])
   else:
-    for i in range (i, length + i):
-      subs = subs + s[i]
+    for i in range (i, length + i -1):
+      subs = subs + s[i] 
       print(subs)
 
 

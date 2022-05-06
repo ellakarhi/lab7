@@ -1,43 +1,45 @@
-lower = "abcdefghijklmnopqrstuvwqxyz"
+lower      = "abcdefghijklmnopqrstuvwxyz"
 
-def encryption():
+def encryption ():
   encrypted = ""
-  sentence = input("What do you want to get encrypted: ")
-  shift = int(input("How far shifted do you want it (positive numbers only): "))
-  for letter in sentence.lower():
+  sentence = input("What do you want to encrypt: ")
+  shift = int(input("What is the shift number (positive only): "))
   
+  for letter in sentence.lower():
+    
     if letter in lower:
       pos = lower.find(letter)
-      encrypted = lower[(pos+shift) % len(lower)]
-
+      encrypted = encrypted + lower[(pos+shift) % len(lower)]
     else:
       encrypted = encrypted + letter
-      
-  print(encrypted)
+
+  print (encrypted)
   main()
 
-def decryption():
-  decrypted = ""
+def decryption ():
+  decrypted  = ""
   sentence = input("What is your encrypted sentence: ")
-  shift = int(input("What is it shifted by (negative numbers only): "))
-  for letter in sentence.lower():
+  shift = int(input("What is the shift number (negative only)?: "))
   
+  for letter in sentence.lower():
+    
     if letter in lower:
       pos = lower.find(letter)
-      decrypted = lower[(pos+shift) % len(lower)]
-
+      decrypted = decrypted + lower[(pos+shift) % len(lower)]
     else:
       decrypted = decrypted + letter
-  print(decrypted)
+
+  print (decrypted)
   main()
 
 def main():
-  option = int(input("Do you want to encrypt (1), decrypt (2), or quit(3)?: "))
+  option = int(input("Did you want to encrypt (1), decrypt (2), or quit (3)? "))
+  
   if option == 1:
     encryption()
-  if option == 2:
+  elif option == 2:
     decryption()
   else:
     exit()
-  
+
 main()
